@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="app_name">Populus</string>
+
+    <!-- Generic Strings -->
+    <string name="retry">Retry</string>
+    <string name="go_back">Go back</string>
+
+    <!-- Error messages -->
+    <string name="error_generic">Something went wrong. Please try again.</string>
+
+    <!-- Api Error Messages -->
+    <string name="api_error_dev">There was a problem talking to the network. Retrying is unlikely to solve the issue.</string>
+    <string name="api_error_rate_limit">Rate limit reached! Please try again later</string>
+    <string name="api_error_fallback">@string/error_generic</string>
+
+    <!-- User list screen -->
+    <string name="search_users">Search Users</string>
+    <string name="user_search_idle_hint">Start by typing something into that box up there 👆</string>
+    <string name="user_search_empty_message">Could not find any results for \"%s\"</string>
+    <string name="reputation_x">Reputation: %d</string>
+
+    <!-- User Detail screen -->
+    <string name="reputation">Reputation</string>
+    <string name="joined">Joined</string>
+    <string name="age">Age</string>
+    <string name="age_unknown">Unknown</string>
+    <string name="location">Location</string>
+    <string name="location_unknown">Unknown</string>
+
+    <string name="bronze_x">Bronze\n%d</string>
+    <string name="silver_x">Silver\n%d</string>
+    <string name="gold_x">Gold\n%d</string>
+
+</resources>

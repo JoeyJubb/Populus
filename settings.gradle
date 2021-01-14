@@ -1,0 +1,5 @@
+include ':populus'
+include ':presentation'
+include ':data'
+include ':domain'
+rootProject.name = "Populus"

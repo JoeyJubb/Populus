@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/user_list">
+
+    <fragment
+        android:id="@+id/user_list"
+        android:name="uk.co.bubblebearapps.presentation.ui.users.search.UserListFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/user_list_fragment">
+        <action
+            android:id="@+id/action_user_list_to_user_detail"
+            app:destination="@id/user_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/user_detail"
+        android:name="uk.co.bubblebearapps.presentation.ui.users.detail.UserDetailFragment"
+        tools:layout="@layout/user_detail_fragment">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+</navigation>

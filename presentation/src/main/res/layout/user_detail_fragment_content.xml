@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_user"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="?colorSurface"
+        android:elevation="@dimen/elevation_low"
+        android:importantForAccessibility="no"
+        android:outlineProvider="bounds"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_scrollFlags="scroll"
+        tools:background="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.MyTheme.Headline2"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_user"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/text_gold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:background="@drawable/bg_badge"
+        android:backgroundTint="@color/gold"
+        android:gravity="center"
+        android:textColor="@color/gold"
+        app:layout_constraintEnd_toStartOf="@id/text_silver"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/text_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_user_name"
+        tools:text="112321352" />
+
+    <TextView
+        android:id="@+id/text_silver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:background="@drawable/bg_badge"
+        android:backgroundTint="@color/silver"
+        android:gravity="center"
+        android:textColor="@color/silver"
+        app:layout_constraintBottom_toBottomOf="@+id/text_gold"
+        app:layout_constraintEnd_toStartOf="@id/text_bronze"
+        app:layout_constraintStart_toEndOf="@+id/text_gold"
+        app:layout_constraintTop_toTopOf="@+id/text_gold"
+        tools:text="153123122" />
+
+    <TextView
+        android:id="@+id/text_bronze"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:background="@drawable/bg_badge"
+        android:backgroundTint="@color/bronze"
+        android:gravity="center"
+        android:textColor="@color/bronze"
+        app:layout_constraintBottom_toBottomOf="@+id/text_gold"
+        app:layout_constraintEnd_toEndOf="@+id/text_user_name"
+        app:layout_constraintStart_toEndOf="@+id/text_silver"
+        app:layout_constraintTop_toTopOf="@+id/text_gold"
+        tools:text="12312413" />
+
+    <TextView
+        android:id="@+id/text_reputation_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:accessibilityTraversalBefore="@id/text_reputation"
+        android:text="@string/reputation"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintStart_toStartOf="@id/text_reputation"
+        app:layout_constraintTop_toBottomOf="@id/text_gold" />
+
+    <TextView
+        android:id="@+id/text_reputation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:accessibilityTraversalBefore="@id/text_creation_date_label"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintEnd_toStartOf="@id/text_creation_date"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_reputation_label"
+        tools:text="1,000,000,000" />
+
+    <TextView
+        android:id="@+id/text_creation_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:accessibilityTraversalBefore="@id/text_creation_date"
+        android:text="@string/joined"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintStart_toStartOf="@id/text_creation_date"
+        app:layout_constraintTop_toTopOf="@id/text_reputation_label" />
+
+    <TextView
+        android:id="@+id/text_creation_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:accessibilityTraversalBefore="@id/text_age_label"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_reputation"
+        app:layout_constraintTop_toBottomOf="@+id/text_creation_date_label"
+        tools:text="@tools:sample/date/ddmmyy" />
+
+    <TextView
+        android:id="@+id/text_age_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:accessibilityTraversalBefore="@id/text_age"
+        android:text="@string/age"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintStart_toStartOf="@id/text_age"
+        app:layout_constraintTop_toBottomOf="@+id/text_reputation" />
+
+    <TextView
+        android:id="@+id/text_age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:accessibilityTraversalBefore="@id/text_location_label"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintEnd_toStartOf="@id/text_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_age_label"
+        tools:text="102" />
+
+    <TextView
+        android:id="@+id/text_location_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:accessibilityTraversalBefore="@id/text_location"
+        android:text="@string/location"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintStart_toStartOf="@id/text_location"
+        app:layout_constraintTop_toTopOf="@id/text_age_label" />
+
+    <TextView
+        android:id="@+id/text_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_age"
+        app:layout_constraintTop_toTopOf="@id/text_age"
+        tools:text="@tools:sample/cities" />
+</androidx.constraintlayout.widget.ConstraintLayout>
